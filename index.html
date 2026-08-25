@@ -3,132 +3,118 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>IBKR Ecosystem Study | Global Trading Prototype</title>
-    <meta
-      name="description"
-      content="A broker ecosystem study project with a marketing site, dashboard, and simple backend wallet."
-    />
+    <title>Why Trade Globally with IBKR? | Ecosystem Study</title>
+    <meta name="description" content="A study build of a broker ecosystem with landing content, account flow, and a simple backend wallet." />
     <link rel="icon" href="./images/ibkr-symbol.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles/app.css" />
   </head>
   <body>
     <div class="market-strip">
-      <span>Study Market Pulse</span>
-      <strong>BTC 2026 forecast: Yes 7%, No 88%</strong>
-      <a href="#markets">View prediction markets</a>
+      <strong>Will the highest price of Bitcoin exceed $130,000 in 2026?</strong>
+      <span>Yes 7%, No 88%</span>
+      <a href="#markets">View Prediction Markets</a>
       <button id="riskButton" type="button">Disclosure</button>
     </div>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="IBKR ecosystem study home">
-        <span class="brand-mark">B</span>
-        <span>Interactive<span>Brokers</span></span>
-      </a>
+      <div class="header-top">
+        <a class="brand" href="#top" aria-label="Interactive Brokers study home">
+          <img src="./images/ibkr-symbol.svg" alt="" />
+          <span>Interactive<span>Brokers</span></span>
+        </a>
+        <div class="header-actions">
+          <button class="icon-button" id="searchButton" type="button" aria-label="Open search">Search</button>
+          <button class="ghost-button" data-auth-open="login" type="button">Log In</button>
+          <button class="primary-button" data-auth-open="signup" type="button">Open Account</button>
+          <button class="menu-button" id="menuButton" type="button" aria-label="Open menu">Menu</button>
+        </div>
+      </div>
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="#why">Why IBKR</a>
-        <a href="#tools">Tools</a>
+        <a href="#markets">Products</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#dashboard">Accounts</a>
         <a href="#pricing">Pricing</a>
         <a href="#campus">Education</a>
-        <a href="#security">Security</a>
         <a href="#faq">Support</a>
+        <a href="#footer">About Us</a>
       </nav>
-      <div class="header-actions">
-        <button class="icon-button" id="searchButton" type="button" aria-label="Open search">⌕</button>
-        <button class="ghost-button" data-auth-open="login" type="button">Log In</button>
-        <button class="primary-button" data-auth-open="signup" type="button">Open Account</button>
-        <button class="menu-button" id="menuButton" type="button" aria-label="Open menu">☰</button>
-      </div>
     </header>
 
     <main id="top">
-      <section class="hero">
+      <section class="hero" id="why">
         <div class="hero-inner">
           <p class="eyebrow">Why IBKR</p>
           <h1>Smarter Execution. Lower Costs. Returns That Compound.</h1>
           <p>
-            A study build for understanding the brokerage ecosystem: landing pages,
-            account onboarding, portfolio views, and wallet-led money movement.
+            Lower trading costs, AI-powered tools, advanced execution, and global market access,
+            designed to help more of your returns stay invested and grow over time.
           </p>
           <button class="primary-button large" data-auth-open="signup" type="button">Open Account</button>
-          <button class="text-button" data-scroll="#disclosures" type="button">Lower Cost Disclosure</button>
+          <button class="text-button disclosure-link" data-scroll="#disclosures" type="button">Lower Cost Disclosure</button>
         </div>
       </section>
 
-      <section class="stats-band" id="why" aria-label="Key platform metrics">
+      <section class="stats-band" aria-label="Key platform metrics">
         <article>
-          <span>Average annual return study</span>
+          <span>Average annual return of</span>
           <strong>24.30%</strong>
-          <p>Modeled client return comparison vs. benchmark from 2023-2025.</p>
+          <p>for IBKR Individual Clients vs. 23.10% on the S&amp;P 500 from 2023-2025</p>
         </article>
         <article>
           <span>Earn interest up to</span>
-          <strong>3.13%</strong>
-          <p>Simulated yield on idle cash tiers in the backend wallet.</p>
+          <strong><small>USD</small> 3.13%</strong>
+          <p>on uninvested cash</p>
         </article>
         <article>
           <span>Pay up to</span>
-          <strong>55% less</strong>
-          <p>Margin cost comparison module ready for real data later.</p>
+          <strong>55% <small>Less</small></strong>
+          <p>on margin</p>
         </article>
       </section>
 
       <section class="section narrow ai-section" id="tools">
-        <p class="section-kicker">AI-powered tools</p>
-        <h2>Better Decisions From One Platform.</h2>
+        <h2>AI-Powered Tools. Better Decisions.</h2>
         <p>
-          Connect research, screeners, simulated portfolio data, and trade notes
-          into a single account workspace.
+          Connect your preferred AI to your account, or use built-in AI tools to research
+          investments, analyze portfolios, and trade across 170+ markets.
         </p>
-        <div class="feature-grid three">
+        <div class="feature-grid three plain">
           <article>
             <h3>AI Integration</h3>
-            <p>Study how an assistant could inspect watchlists and draft trade instructions for review.</p>
+            <p>Connect AI platforms that support Model Context Protocol to research investments, analyze your portfolio, and generate trade instructions you review and submit.</p>
           </article>
           <article>
             <h3>AI Screeners</h3>
-            <p>Filter simulated markets by cash flow, sector, region, and volatility.</p>
+            <p>Describe what you are looking for and receive ranked opportunities from a wide global universe of stocks and ETFs.</p>
           </article>
           <article>
             <h3>Ask IBKR</h3>
-            <p>Ask account-aware questions against the local wallet and demo holdings.</p>
+            <p>Ask questions about concentration, exposure, and account data inside a study account workflow.</p>
           </article>
         </div>
+        <a class="section-link" href="#dashboard">Explore All IBKR AI Tools</a>
       </section>
 
-      <section class="section worldwide" id="markets">
-        <div>
-          <p class="section-kicker">Global market access</p>
-          <h2>Invest Worldwide With One Platform</h2>
-          <p>
-            Trade across asset classes with one account model. The content is placeholder
-            study copy so you can swap products and regulatory language later.
-          </p>
-          <ul class="asset-list">
-            <li>Stocks</li>
-            <li>ETFs</li>
-            <li>Options</li>
-            <li>Futures</li>
-            <li>Bonds</li>
-            <li>Currencies</li>
-            <li>Mutual Funds</li>
-            <li>Prediction Markets</li>
-          </ul>
-        </div>
+      <section class="quote-card">
+        <blockquote>
+          <span>"</span>
+          <p>In all, IBKR tops our list of brokerages: it is the highest-rated broker at BrokerChooser.</p>
+          <cite>BrokerChooser | April 7, 2026</cite>
+        </blockquote>
       </section>
 
-      <section class="section execution">
-        <div>
-          <h2>Keep More in Your Portfolio with Smarter Execution</h2>
-          <p>
-            Execution quality directly impacts what remains after every trade.
-            This module is ready for routing, spread, and fill-quality data later.
-          </p>
-          <div class="mini-stats">
-            <span><strong>5 Million</strong> demo clients</span>
-            <span><strong>4 Million</strong> daily simulated trades</span>
-            <span><strong>24.30%</strong> modeled return</span>
-          </div>
-        </div>
+      <section class="section cost-section">
+        <h2>The Real Cost of Trading Is Not Just Commissions</h2>
+        <p>Many brokers promote free trades while recovering costs elsewhere. IBKR competes on the full economics of trading, not just the headline price.</p>
+        <ul class="check-list cost-list">
+          <li>Low commissions on trades, starting at $0</li>
+          <li>Margin rates up to 55% lower</li>
+          <li>Earn interest up to 3.13% on uninvested cash</li>
+          <li>Execution quality and price improvement</li>
+          <li>Low FX conversion costs</li>
+          <li>No platform fees or added spreads</li>
+        </ul>
       </section>
 
       <section class="section transfer">
@@ -136,7 +122,7 @@
         <p>Investors switch brokers to improve outcomes, not because of marketing claims.</p>
         <div class="feature-grid two">
           <article>
-            <h3>Why clients transfer</h3>
+            <h3>Why clients transfer to IBKR</h3>
             <ul class="check-list">
               <li>Lower trading and financing costs that compound over time</li>
               <li>Direct access to global markets in one platform</li>
@@ -145,61 +131,112 @@
             </ul>
           </article>
           <article>
-            <h3>Switch without disruption</h3>
+            <h3>Switch Without Disruption</h3>
             <ul class="check-list">
               <li>Transfer assets without selling positions</li>
               <li>No tax impact from standard transfers</li>
-              <li>Fast digital transfers for supported accounts</li>
+              <li>Fast, digital transfers for US accounts</li>
               <li>Guided support for non-US transfers</li>
             </ul>
           </article>
         </div>
+        <a class="section-link" href="#dashboard">Learn How to Transfer Assets</a>
+      </section>
+
+      <section class="section execution">
+        <div>
+          <h2>Keep More in Your Portfolio with Smarter Execution</h2>
+          <p>
+            Execution quality directly impacts what you keep after every trade.
+            On every trade, IB SmartRouting seeks the best available price from market makers,
+            liquidity providers, and exchanges.
+          </p>
+          <div class="mini-stats">
+            <span><strong>5 Million</strong> clients online</span>
+            <span><strong>4 Million</strong> trades daily</span>
+            <span><strong>24.30%</strong> average annual return</span>
+          </div>
+          <a class="section-link" href="#disclosures">Learn About Best Execution</a>
+        </div>
       </section>
 
       <section class="section pricing" id="pricing">
-        <p class="section-kicker">Transparent pricing</p>
         <h2>Choose the Pricing That Fits How You Trade</h2>
+        <p>Clear pricing with no hidden costs.</p>
         <div class="pricing-grid">
           <article>
             <span>Occasional Traders</span>
-            <h3>IBKR Lite</h3>
+            <h3>IBKR <b>Lite</b></h3>
             <ul class="check-list">
-              <li>Commission-free US stock and ETF study trades</li>
-              <li>Simple investing strategies</li>
-              <li>Beginner-friendly portfolio views</li>
+              <li>Commission-free US stock and ETF trades</li>
+              <li>Includes payment for order flow</li>
+              <li>Designed for straightforward investing strategies</li>
             </ul>
           </article>
           <article>
             <span>Active Traders</span>
-            <h3>IBKR Pro</h3>
+            <h3>IBKR <b>Pro</b></h3>
             <ul class="check-list">
-              <li>Low commissions with advanced order routing</li>
-              <li>Options, futures, and FX study flows</li>
+              <li>Low commissions with no payment for order flow</li>
+              <li>Uses IB SmartRouting to seek price improvement</li>
               <li>Designed for active and advanced traders</li>
             </ul>
           </article>
         </div>
+        <p class="pricing-note">IBKR is publicly traded, a member of the S&amp;P 500, and operates under strict global regulatory oversight.</p>
+        <button class="primary-button large" data-auth-open="signup" type="button">Open Account</button>
       </section>
 
-      <section class="section platforms">
+      <section class="section worldwide" id="markets">
+        <div>
+          <h2>Invest Worldwide With One Platform</h2>
+          <p>
+            90% of the world's listed companies are outside the US, and IBKR lets you reach more of them.
+          </p>
+          <p>Trade more than 170 markets worldwide, fund and trade in 29 currencies, all in one platform across asset classes.</p>
+          <ul class="asset-list">
+            <li>Stocks</li>
+            <li>ETFs</li>
+            <li>Options</li>
+            <li>Futures</li>
+            <li>Bonds</li>
+            <li>Currencies</li>
+            <li>Mutual Funds</li>
+            <li>US Spot Gold</li>
+            <li>Prediction Markets <small>New</small></li>
+          </ul>
+          <a class="section-link" href="#dashboard">View Global Markets</a>
+        </div>
+      </section>
+
+      <section class="section platforms" id="platforms">
         <div>
           <h2>Platforms That Scale With Your Strategy</h2>
-          <p>Start simple. Move to advanced strategies as your needs grow.</p>
+          <p>Start simple. Move to advanced strategies as your needs grow. Use AI-powered tools to find new investment ideas faster.</p>
+          <a class="section-link platform-link" href="#dashboard">Explore Trading Platforms</a>
           <div class="platform-card">
             <div>
               <h3>For New and Occasional Investors</h3>
               <p>Simple portfolio tools, clean mobile and web experience.</p>
+              <a href="#dashboard">IBKR GlobalTrader</a>
               <a href="#dashboard">Client Portal</a>
+              <a href="#dashboard">IBKR Desktop</a>
             </div>
-            <img src="./images/platforms-gt.png" alt="Trading platform preview" />
+            <div class="device-stack">
+              <img class="phone-img" src="./images/platforms-ibkr-mobile.png" alt="IBKR mobile platform preview" />
+              <img class="desktop-img" src="./images/platforms-cp.png" alt="IBKR client portal preview" />
+              <img class="desktop-img dark-device" src="./images/platforms-desktop.png" alt="IBKR desktop preview" />
+            </div>
           </div>
           <div class="platform-card reverse">
             <div>
               <h3>For Experienced and Advanced Traders</h3>
-              <p>Advanced charting, scanners, options analytics, and order types.</p>
+              <p>Access advanced charting and scanners, options analytics and 100+ order types.</p>
+              <a href="#dashboard">IBKR Mobile</a>
               <a href="#dashboard">Trader Workstation</a>
+              <a href="#dashboard">IBKR Desktop</a>
             </div>
-            <img src="./images/platforms-tws.png" alt="Advanced workstation preview" />
+            <img src="./images/platforms-tws.png" alt="Advanced trading workstation preview" />
           </div>
         </div>
       </section>
@@ -213,25 +250,43 @@
             <li>Video lessons and guided walkthroughs</li>
             <li>Options, futures, and global trading education</li>
             <li>Live and on-demand webinars</li>
+            <li>Interactive Trading Labs and simulations</li>
           </ul>
+          <a class="section-link" href="#dashboard">View Free Resources</a>
+        </div>
+        <div class="campus-devices">
+          <img src="./images/campus-ipad-options-xl.png" alt="IBKR Campus tablet preview" />
+          <img src="./images/campus-iphone-podcast-xl.png" alt="IBKR Campus phone preview" />
         </div>
       </section>
 
       <section class="section security" id="security">
-        <p class="section-kicker">Security you can trust</p>
-        <h2>Built for Scale, Transparency, and Long-Term Stability.</h2>
+        <h2>Security You Can Trust</h2>
+        <p>Built for scale, transparency, and long-term stability.</p>
+        <span class="pill">IBKR at a Glance</span>
         <div class="security-grid">
-          <span><strong>5 Million</strong> users modeled</span>
-          <span><strong>$903 Billion</strong> client assets placeholder</span>
-          <span><strong>$5 Million</strong> cash protection placeholder</span>
-          <span><strong>50 Years</strong> innovation study marker</span>
+          <span><small>Trusted by over</small><strong>5 Million</strong> clients worldwide</span>
+          <span><small>Executing more than</small><strong>4 Million</strong> trades daily</span>
+          <span><small>Nasdaq-listed</small><strong>IBKR</strong></span>
+          <span><small>Member of the</small><strong>S&amp;P 500</strong></span>
+          <span><small>Client assets over</small><strong>$903 Billion</strong></span>
+          <span><small>Total equity exceeding</small><strong>$22 Billion</strong></span>
+          <span><small>Over</small><strong>$5 Million</strong> account protection coverage</span>
+          <span><small>Nearly</small><strong>50 Years</strong> of innovation</span>
         </div>
+      </section>
+
+      <section class="get-started">
+        <a class="section-link" href="#security">IBKR Strength and Security</a>
+        <h2>Get Started</h2>
+        <p>Trade with a broker built for investors who look beyond free trades.</p>
+        <button class="primary-button large" data-auth-open="signup" type="button">Open Account</button>
       </section>
 
       <section class="dashboard-section" id="dashboard">
         <div class="dashboard-copy">
-          <p class="section-kicker">Backend study</p>
-          <h2>Wallet and Account Dashboard</h2>
+          <p class="section-kicker">Account study</p>
+          <h2>Client Portal Wallet</h2>
           <p>
             Sign up or log in to use the local JSON-backed wallet. Deposits,
             withdrawals, and transfers are saved by the Node backend.
@@ -249,39 +304,104 @@
       <section class="section faq" id="faq">
         <h2>Frequently Asked Questions</h2>
         <details>
-          <summary>Is this a real broker?</summary>
-          <p>No. This is a study project for learning broker-style product, account, and wallet flows.</p>
+          <summary>Why should I consider an IBKR-style broker platform?</summary>
+          <p>This study page focuses on lower costs, global access, execution quality, platform depth, and account tools.</p>
+        </details>
+        <details>
+          <summary>Is this suitable for both beginners and experienced investors?</summary>
+          <p>The prototype separates simple account flows from advanced platform sections so the ecosystem can scale.</p>
+        </details>
+        <details>
+          <summary>How competitive are the fees and commissions?</summary>
+          <p>The pricing module mirrors the information hierarchy from the screenshots and is ready for real fee data later.</p>
+        </details>
+        <details>
+          <summary>What trading tools and technology does IBKR offer?</summary>
+          <p>The platform section includes mobile, client portal, desktop, and workstation study surfaces.</p>
         </details>
         <details>
           <summary>Where is wallet data stored?</summary>
           <p>The backend stores demo users, wallet balances, and transactions in <code>data/db.json</code>.</p>
         </details>
-        <details>
-          <summary>Can I swap assets and copy later?</summary>
-          <p>Yes. The sections are plain HTML and the market data is isolated in the backend.</p>
-        </details>
+      </section>
+
+      <section class="disclosures" id="disclosures">
+        <h3>Disclosures</h3>
+        <ol>
+          <li>Past performance is not indicative of future results. Returns shown are study copy based on the provided screenshot information structure.</li>
+          <li>Restrictions apply. Interest, margin, and market-access figures are placeholders for learning implementation patterns.</li>
+          <li>This project is a study build. It is not a real broker, exchange, bank, custodian, payment processor, or investment adviser.</li>
+          <li>Wallet balances are simulated and stored locally by the backend.</li>
+        </ol>
       </section>
     </main>
 
-    <footer class="site-footer" id="disclosures">
+    <aside class="share-bar" aria-label="Share controls">
+      <button type="button" aria-label="Previous section">‹</button>
+      <span>Share</span>
+      <a href="#top" aria-label="Share to Facebook">f</a>
+      <a href="#top" aria-label="Share to X">X</a>
+      <a href="#top" aria-label="Share to LinkedIn">in</a>
+      <a href="#top" aria-label="Share by email">@</a>
+    </aside>
+    <a class="to-top" href="#top" aria-label="Back to top">⌃</a>
+
+    <footer class="site-footer" id="footer">
       <div class="footer-grid">
         <div>
-          <h3>IBKR Ecosystem Study</h3>
-          <p>A study build for brokerage interfaces, account flows, and backend wallet mechanics.</p>
-        </div>
-        <div>
           <h4>Account</h4>
-          <a href="#dashboard">Dashboard</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">Support</a>
+          <a href="#dashboard">Log In</a>
+          <a href="#dashboard">Open an Account</a>
+          <a href="#dashboard">Finish an Application</a>
+          <a href="#pricing">Account Types</a>
+          <a href="#dashboard">Free Trial</a>
+          <h4>Software &amp; Downloads</h4>
+          <a href="#platforms">Trader Workstation</a>
+          <a href="#platforms">IBKR Desktop</a>
+          <a href="#platforms">IBKR Mobile</a>
+          <a href="#dashboard">APIs</a>
         </div>
         <div>
-          <h4>Disclosures</h4>
-          <p>
-            Demo only. No real trading, custody, banking, investment advice, or payment processing occurs here.
-          </p>
+          <h4>Support</h4>
+          <a href="#dashboard">Fund Your Account</a>
+          <a href="#faq">For Individuals</a>
+          <a href="#faq">For Institutions</a>
+          <a href="#faq">Browse our FAQs</a>
+          <a href="#faq">System Status</a>
+          <h4>Vendor Support</h4>
+          <a href="#footer">Supplier Information</a>
+        </div>
+        <div>
+          <h4>About Us</h4>
+          <a href="#security">Awards</a>
+          <a href="#footer">Careers</a>
+          <a href="#disclosures">Information and History</a>
+          <a href="#disclosures">Investor Relations</a>
+          <a href="#disclosures">News @ IBKR</a>
+          <a href="#disclosures">Regulatory Reports</a>
+          <a href="#disclosures">Affiliate Programs</a>
+        </div>
+        <div>
+          <h4>Connect with Us</h4>
+          <a href="#footer">Facebook</a>
+          <a href="#footer">Instagram</a>
+          <a href="#footer">LinkedIn</a>
+          <a href="#footer">Reddit</a>
+          <a href="#footer">X (Twitter)</a>
+          <a href="#footer">YouTube</a>
         </div>
       </div>
+      <div class="legal-row">
+        <a href="#footer">Accessibility Policy</a>
+        <a href="#footer">Anti-Fraud Notice</a>
+        <a href="#footer">Customer Relationship Summary</a>
+        <a href="#footer">Forms and Disclosures</a>
+        <a href="#footer">Privacy</a>
+        <a href="#footer">Site Map</a>
+      </div>
+      <p class="footer-note">
+        Interactive Brokers LLC study page. Member NYSE - FINRA - SIPC language appears here as placeholder information structure only.
+      </p>
     </footer>
 
     <dialog class="auth-modal" id="authModal">
