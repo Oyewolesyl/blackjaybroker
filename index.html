@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IBKR Ecosystem Study | Global Trading Prototype</title>
+    <meta
+      name="description"
+      content="A broker ecosystem study project with a marketing site, dashboard, and simple backend wallet."
+    />
+    <link rel="icon" href="./images/ibkr-symbol.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <div class="market-strip">
+      <span>Study Market Pulse</span>
+      <strong>BTC 2026 forecast: Yes 7%, No 88%</strong>
+      <a href="#markets">View prediction markets</a>
+      <button id="riskButton" type="button">Disclosure</button>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="IBKR ecosystem study home">
+        <span class="brand-mark">B</span>
+        <span>Interactive<span>Brokers</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#why">Why IBKR</a>
+        <a href="#tools">Tools</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#campus">Education</a>
+        <a href="#security">Security</a>
+        <a href="#faq">Support</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="searchButton" type="button" aria-label="Open search">⌕</button>
+        <button class="ghost-button" data-auth-open="login" type="button">Log In</button>
+        <button class="primary-button" data-auth-open="signup" type="button">Open Account</button>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow">Why IBKR</p>
+          <h1>Smarter Execution. Lower Costs. Returns That Compound.</h1>
+          <p>
+            A study build for understanding the brokerage ecosystem: landing pages,
+            account onboarding, portfolio views, and wallet-led money movement.
+          </p>
+          <button class="primary-button large" data-auth-open="signup" type="button">Open Account</button>
+          <button class="text-button" data-scroll="#disclosures" type="button">Lower Cost Disclosure</button>
+        </div>
+      </section>
+
+      <section class="stats-band" id="why" aria-label="Key platform metrics">
+        <article>
+          <span>Average annual return study</span>
+          <strong>24.30%</strong>
+          <p>Modeled client return comparison vs. benchmark from 2023-2025.</p>
+        </article>
+        <article>
+          <span>Earn interest up to</span>
+          <strong>3.13%</strong>
+          <p>Simulated yield on idle cash tiers in the backend wallet.</p>
+        </article>
+        <article>
+          <span>Pay up to</span>
+          <strong>55% less</strong>
+          <p>Margin cost comparison module ready for real data later.</p>
+        </article>
+      </section>
+
+      <section class="section narrow ai-section" id="tools">
+        <p class="section-kicker">AI-powered tools</p>
+        <h2>Better Decisions From One Platform.</h2>
+        <p>
+          Connect research, screeners, simulated portfolio data, and trade notes
+          into a single account workspace.
+        </p>
+        <div class="feature-grid three">
+          <article>
+            <h3>AI Integration</h3>
+            <p>Study how an assistant could inspect watchlists and draft trade instructions for review.</p>
+          </article>
+          <article>
+            <h3>AI Screeners</h3>
+            <p>Filter simulated markets by cash flow, sector, region, and volatility.</p>
+          </article>
+          <article>
+            <h3>Ask IBKR</h3>
+            <p>Ask account-aware questions against the local wallet and demo holdings.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section worldwide" id="markets">
+        <div>
+          <p class="section-kicker">Global market access</p>
+          <h2>Invest Worldwide With One Platform</h2>
+          <p>
+            Trade across asset classes with one account model. The content is placeholder
+            study copy so you can swap products and regulatory language later.
+          </p>
+          <ul class="asset-list">
+            <li>Stocks</li>
+            <li>ETFs</li>
+            <li>Options</li>
+            <li>Futures</li>
+            <li>Bonds</li>
+            <li>Currencies</li>
+            <li>Mutual Funds</li>
+            <li>Prediction Markets</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section execution">
+        <div>
+          <h2>Keep More in Your Portfolio with Smarter Execution</h2>
+          <p>
+            Execution quality directly impacts what remains after every trade.
+            This module is ready for routing, spread, and fill-quality data later.
+          </p>
+          <div class="mini-stats">
+            <span><strong>5 Million</strong> demo clients</span>
+            <span><strong>4 Million</strong> daily simulated trades</span>
+            <span><strong>24.30%</strong> modeled return</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section transfer">
+        <h2>Why Investors Move Their Assets to IBKR</h2>
+        <p>Investors switch brokers to improve outcomes, not because of marketing claims.</p>
+        <div class="feature-grid two">
+          <article>
+            <h3>Why clients transfer</h3>
+            <ul class="check-list">
+              <li>Lower trading and financing costs that compound over time</li>
+              <li>Direct access to global markets in one platform</li>
+              <li>Professional execution with transparent pricing</li>
+              <li>Platforms that scale as strategies become more complex</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Switch without disruption</h3>
+            <ul class="check-list">
+              <li>Transfer assets without selling positions</li>
+              <li>No tax impact from standard transfers</li>
+              <li>Fast digital transfers for supported accounts</li>
+              <li>Guided support for non-US transfers</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section pricing" id="pricing">
+        <p class="section-kicker">Transparent pricing</p>
+        <h2>Choose the Pricing That Fits How You Trade</h2>
+        <div class="pricing-grid">
+          <article>
+            <span>Occasional Traders</span>
+            <h3>IBKR Lite</h3>
+            <ul class="check-list">
+              <li>Commission-free US stock and ETF study trades</li>
+              <li>Simple investing strategies</li>
+              <li>Beginner-friendly portfolio views</li>
+            </ul>
+          </article>
+          <article>
+            <span>Active Traders</span>
+            <h3>IBKR Pro</h3>
+            <ul class="check-list">
+              <li>Low commissions with advanced order routing</li>
+              <li>Options, futures, and FX study flows</li>
+              <li>Designed for active and advanced traders</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section platforms">
+        <div>
+          <h2>Platforms That Scale With Your Strategy</h2>
+          <p>Start simple. Move to advanced strategies as your needs grow.</p>
+          <div class="platform-card">
+            <div>
+              <h3>For New and Occasional Investors</h3>
+              <p>Simple portfolio tools, clean mobile and web experience.</p>
+              <a href="#dashboard">Client Portal</a>
+            </div>
+            <img src="./images/platforms-gt.png" alt="Trading platform preview" />
+          </div>
+          <div class="platform-card reverse">
+            <div>
+              <h3>For Experienced and Advanced Traders</h3>
+              <p>Advanced charting, scanners, options analytics, and order types.</p>
+              <a href="#dashboard">Trader Workstation</a>
+            </div>
+            <img src="./images/platforms-tws.png" alt="Advanced workstation preview" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section campus" id="campus">
+        <div>
+          <h2>Level Up With IBKR Campus</h2>
+          <p>Education designed for real-world investing.</p>
+          <ul class="check-list">
+            <li>Courses for beginner, intermediate, and advanced levels</li>
+            <li>Video lessons and guided walkthroughs</li>
+            <li>Options, futures, and global trading education</li>
+            <li>Live and on-demand webinars</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section security" id="security">
+        <p class="section-kicker">Security you can trust</p>
+        <h2>Built for Scale, Transparency, and Long-Term Stability.</h2>
+        <div class="security-grid">
+          <span><strong>5 Million</strong> users modeled</span>
+          <span><strong>$903 Billion</strong> client assets placeholder</span>
+          <span><strong>$5 Million</strong> cash protection placeholder</span>
+          <span><strong>50 Years</strong> innovation study marker</span>
+        </div>
+      </section>
+
+      <section class="dashboard-section" id="dashboard">
+        <div class="dashboard-copy">
+          <p class="section-kicker">Backend study</p>
+          <h2>Wallet and Account Dashboard</h2>
+          <p>
+            Sign up or log in to use the local JSON-backed wallet. Deposits,
+            withdrawals, and transfers are saved by the Node backend.
+          </p>
+        </div>
+        <div class="dashboard-shell" id="appPanel">
+          <div class="signed-out-panel">
+            <h3>Create a study account</h3>
+            <p>Use any email and password. This is a local learning backend, not a real brokerage account.</p>
+            <button class="primary-button" data-auth-open="signup" type="button">Open Account</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+          <summary>Is this a real broker?</summary>
+          <p>No. This is a study project for learning broker-style product, account, and wallet flows.</p>
+        </details>
+        <details>
+          <summary>Where is wallet data stored?</summary>
+          <p>The backend stores demo users, wallet balances, and transactions in <code>data/db.json</code>.</p>
+        </details>
+        <details>
+          <summary>Can I swap assets and copy later?</summary>
+          <p>Yes. The sections are plain HTML and the market data is isolated in the backend.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="disclosures">
+      <div class="footer-grid">
+        <div>
+          <h3>IBKR Ecosystem Study</h3>
+          <p>A study build for brokerage interfaces, account flows, and backend wallet mechanics.</p>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">Support</a>
+        </div>
+        <div>
+          <h4>Disclosures</h4>
+          <p>
+            Demo only. No real trading, custody, banking, investment advice, or payment processing occurs here.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="auth-modal" id="authModal">
+      <form method="dialog" class="modal-card">
+        <button class="modal-close" type="submit" aria-label="Close">×</button>
+        <h2 id="authTitle">Open Account</h2>
+        <p>This creates a local study account on the Node backend.</p>
+        <label>
+          Name
+          <input id="authName" autocomplete="name" placeholder="Ada Investor" />
+        </label>
+        <label>
+          Email
+          <input id="authEmail" autocomplete="email" type="email" placeholder="you@example.com" />
+        </label>
+        <label>
+          Password
+          <input id="authPassword" autocomplete="current-password" type="password" placeholder="Minimum 6 characters" />
+        </label>
+        <button class="primary-button" id="authSubmit" type="button">Create Account</button>
+        <button class="text-button" id="authToggle" type="button">Already have an account? Log in</button>
+      </form>
+    </dialog>
+
+    <dialog class="auth-modal" id="riskModal">
+      <form method="dialog" class="modal-card">
+        <button class="modal-close" type="submit" aria-label="Close">×</button>
+        <h2>Study Disclosure</h2>
+        <p>
+          This site is a learning prototype. Wallet balances are simulated and stored locally by the backend.
+          Do not enter real financial credentials or treat any content as investment advice.
+        </p>
+      </form>
+    </dialog>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
