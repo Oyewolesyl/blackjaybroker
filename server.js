@@ -1,10 +1,11 @@
 const http = require("http");
 const fs = require("fs");
+const os = require("os");
 const path = require("path");
 const crypto = require("crypto");
 
 const root = __dirname;
-const dataDir = path.join(root, "data");
+const dataDir = process.env.VERCEL ? path.join(os.tmpdir(), "ibkr-ecosystem-study") : path.join(root, "data");
 const dbPath = path.join(dataDir, "db.json");
 const port = Number(process.env.PORT || 3000);
 
@@ -49,6 +50,18 @@ function sendJson(res, status, body) {
 }
 
 function parseBody(req) {
+  if (req.body && typeof req.body === "object") {
+    return Promise.resolve(req.body);
+  }
+
+  if (typeof req.body === "string") {
+    try {
+      return Promise.resolve(JSON.parse(req.body));
+    } catch {
+      return Promise.reject(new Error("Invalid JSON"));
+    }
+  }
+
   return new Promise((resolve, reject) => {
     let raw = "";
     req.on("data", (chunk) => {
@@ -277,15 +290,25 @@ function serveStatic(req, res) {
   });
 }
 
-const server = http.createServer((req, res) => {
-  if (req.url.startsWith("/api/")) {
-    handleApi(req, res);
-    return;
-  }
-  serveStatic(req, res);
-});
+function createServer() {
+  return http.createServer((req, res) => {
+    if (req.url.startsWith("/api/")) {
+      handleApi(req, res);
+      return;
+    }
+    serveStatic(req, res);
+  });
+}
 
-server.listen(port, () => {
-  ensureDb();
-  console.log(`IBKR ecosystem study running at http://localhost:${port}`);
-});
+if (require.main === module) {
+  const server = createServer();
+  server.listen(port, () => {
+    ensureDb();
+    console.log(`IBKR ecosystem study running at http://localhost:${port}`);
+  });
+}
+
+module.exports = {
+  createServer,
+  handleApi
+};
