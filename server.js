@@ -5,6 +5,7 @@ const path = require("path");
 const crypto = require("crypto");
 
 const root = __dirname;
+const staticRoot = path.join(root, "public");
 const dataDir = process.env.VERCEL ? path.join(os.tmpdir(), "ibkr-ecosystem-study") : path.join(root, "data");
 const dbPath = path.join(dataDir, "db.json");
 const port = Number(process.env.PORT || 3000);
@@ -270,9 +271,9 @@ async function handleApi(req, res) {
 function serveStatic(req, res) {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const requested = url.pathname === "/" ? "/index.html" : decodeURIComponent(url.pathname);
-  const filePath = path.normalize(path.join(root, requested));
+  const filePath = path.normalize(path.join(staticRoot, requested));
 
-  if (!filePath.startsWith(root)) {
+  if (!filePath.startsWith(staticRoot)) {
     res.writeHead(403);
     res.end("Forbidden");
     return;
