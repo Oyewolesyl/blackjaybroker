@@ -1546,6 +1546,18 @@ h2 {
   }
 }
 
+@keyframes tickerBreath {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.86;
+    transform: translateY(-4px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1554,5 +1566,231 @@ h2 {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+/* Mobile containment pass */
+@media (max-width: 760px) {
+  body {
+    width: 100%;
+  }
+
+  .market-strip {
+    min-height: 226px;
+    padding: 18px 22px 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .market-strip strong {
+    max-width: 330px;
+    line-height: 1.45;
+    animation: tickerBreath 4.8s ease-in-out infinite;
+  }
+
+  .market-strip span {
+    font-size: 1.15rem;
+  }
+
+  .market-strip a {
+    width: min(330px, 100%);
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 1.08rem;
+  }
+
+  .market-strip button {
+    width: auto;
+    justify-self: center;
+    font-size: 1rem;
+  }
+
+  .site-header {
+    position: relative;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .header-top {
+    min-height: 260px;
+    padding: 30px 30px 26px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .brand {
+    width: 100%;
+    font-size: clamp(1.55rem, 7vw, 2.05rem);
+  }
+
+  .brand img {
+    width: 30px;
+    height: 42px;
+    flex: 0 0 auto;
+  }
+
+  .header-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 58px minmax(92px, 1fr) minmax(138px, 1.55fr) 48px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .icon-button,
+  .menu-button {
+    min-width: 0;
+    width: 100%;
+    height: 58px;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .menu-button {
+    display: grid;
+    place-items: center;
+    border: 1px solid #d8d8d8;
+    color: transparent;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .menu-button::before {
+    content: "";
+    width: 26px;
+    height: 16px;
+    border-top: 3px solid #141b27;
+    border-bottom: 3px solid #141b27;
+    box-shadow: 0 6px 0 #141b27;
+  }
+
+  .ghost-button,
+  .primary-button {
+    min-width: 0;
+    width: 100%;
+    min-height: 58px;
+    padding: 10px 12px;
+    font-size: clamp(1rem, 5vw, 1.35rem);
+    white-space: nowrap;
+  }
+
+  .main-nav {
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .main-nav.open {
+    padding: 16px 30px 26px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .main-nav a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 64px 22px 70px;
+    place-items: start center;
+  }
+
+  .hero-inner {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .eyebrow,
+  .section-kicker {
+    font-size: 1.08rem;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 15vw, 4.15rem);
+    line-height: 0.98;
+    overflow-wrap: anywhere;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 11vw, 3rem);
+  }
+
+  .hero p:not(.eyebrow),
+  .transfer > p,
+  .pricing > p,
+  .platforms > div > p,
+  .security > p,
+  .get-started > p {
+    font-size: 1.12rem;
+  }
+
+  .section,
+  .dashboard-section {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .stats-band {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .stats-band strong {
+    font-size: clamp(3.2rem, 18vw, 4.4rem);
+  }
+
+  .platform-card,
+  .platform-card.reverse {
+    padding: 28px 22px;
+  }
+
+  .device-stack .dark-device {
+    left: 48%;
+    width: 48%;
+  }
+
+  .campus-devices img:first-child {
+    right: 10%;
+    width: 76%;
+  }
+
+  .campus-devices img:last-child {
+    right: 4%;
+    width: 23%;
+  }
+
+  .to-top {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .header-actions {
+    grid-template-columns: 54px minmax(86px, 1fr) minmax(132px, 1.5fr) 44px;
+    gap: 8px;
+  }
+
+  .ghost-button,
+  .primary-button {
+    font-size: 1.05rem;
+  }
+
+  .brand {
+    font-size: 1.6rem;
   }
 }
